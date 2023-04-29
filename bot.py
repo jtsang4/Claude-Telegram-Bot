@@ -410,6 +410,7 @@ async def error_handler(update: Update, context):
 async def post_init(application: Application):
     await application.bot.set_my_commands([
         BotCommand('/reset', 'Reset the chat history'),
+        BotCommand('/new', 'Alias of /reset'),
         BotCommand('/mode', 'Switch between Claude & Bard'),
         BotCommand('/settings', 'Show Claude & Bard settings'),
         BotCommand('/help', 'Get help message'),
@@ -425,6 +426,7 @@ handler_list = [
     CommandHandler('start', start_bot),
     CommandHandler('help', start_bot),
     CommandHandler('reset', reset_chat),
+    CommandHandler('new', reset_chat),
     CommandHandler('grant', grant),
     CommandHandler('ban', ban),
     CommandHandler('status', status),
