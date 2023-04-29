@@ -29,10 +29,15 @@ If you only have access to one of the models, you can still continue to use this
 
 1. Clone this repository.
 
-2. Fill in `config/config.yml` with reference to `config/config.example.yml`.
+2. Set environment variables
 
-    - [How to obtain telegram bot token](https://core.telegram.org/bots/tutorial#obtain-your-bot-token)
-    - [How to obtain telegram user id](https://bigone.zendesk.com/hc/en-us/articles/360008014894-How-to-get-the-Telegram-user-ID-)
+    * `TELEGRAM_BOT_TOKEN`: telegram bot token
+    * `TELEGRAM_USER_IDS`: Admin user IDs
+    * `CLAUDE_SECRET_KEY`: Claude API key
+    * `BARD_SECRET_KEY`: Bard API key
+
+    > * [How to obtain telegram bot token](https://core.telegram.org/bots/tutorial#obtain-your-bot-token)
+    > * [How to obtain telegram user id](https://bigone.zendesk.com/hc/en-us/articles/360008014894-How-to-get-the-Telegram-user-ID-)
 
 3. Start the bot by:
 
