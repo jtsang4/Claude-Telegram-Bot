@@ -1,7 +1,0 @@
-telegram:
-  token: 'TELEGRAM_BOT_TOKEN'
-  username: ['TELEGRAM_USER_ID_1', ..., 'TELEGRAM_USER_ID_N']
-claude:
-  api: 'CLAUDE_SECRET_KEY'
-bard:
-  api: 'BARD_SECRET_KEY'

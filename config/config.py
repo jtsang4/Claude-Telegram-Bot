@@ -1,11 +1,12 @@
-import yaml
+import os
 
-# load yaml config
-with open("config/config.yml", 'r') as f:
-    config_yaml = yaml.safe_load(f)
+# config environment variables
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+TELEGRAM_USER_IDS = os.getenv("TELEGRAM_USER_IDS")
+CLAUDE_SECRET_KEY = os.getenv("CLAUDE_SECRET_KEY")
+BARD_SECRET_KEY = os.getenv("BARD_SECRET_KEY")
 
-# config parameters
-telegram_token = config_yaml["telegram"]["token"]
-telegram_username = config_yaml["telegram"]["username"]
-claude_api = config_yaml["claude"]["api"]
-bard_api = config_yaml["bard"]["api"]
+telegram_token = TELEGRAM_BOT_TOKEN
+telegram_username = [item.strip() for item in TELEGRAM_USER_IDS.split(",")]
+claude_api = CLAUDE_SECRET_KEY
+bard_api = BARD_SECRET_KEY
